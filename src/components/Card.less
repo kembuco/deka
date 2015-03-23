@@ -1,0 +1,95 @@
+@corner-size: 40px;
+@white: #fdfdfd;
+@blue: #0D47A1;
+@red: #D50000;
+@green: #1B5E20;
+@yellow: #F57F17;
+
+.card {
+  display: inline-block;
+  height: 150px;
+  width: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+  background: @white;
+  margin-left: -70px;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card-number-center {
+  display: inline-block;
+  margin: auto;
+  color: @blue;
+  position: absolute;
+  top: ~"calc(50% - 20px)";
+  left: ~"calc(50% - 20px)";
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.underline .card-number-center {
+  text-decoration: underline;
+}
+
+.blue .card-number-center {
+  color: @blue;
+}
+
+.red .card-number-center {
+  color: @red;
+}
+
+.yellow .card-number-center {
+  color: @yellow;
+}
+
+.green .card-number-center {
+  color: @green;
+}
+
+.card-number-corner {
+  display: inline-block;
+  height: @corner-size;
+  width: @corner-size;
+  background: @blue;
+  color: @white;
+  box-sizing: border-box;
+}
+
+.blue .card-number-corner {
+  background: @blue;
+}
+
+.red .card-number-corner {
+  background: @red;
+}
+
+.green .card-number-corner {
+  background: @green;
+}
+
+.yellow .card-number-corner {
+  background: @yellow;
+}
+
+.card-number-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: @corner-size;
+  border-top-left-radius: 8px;
+  padding: 5px 0 0 8px;
+}
+
+.card-number-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: @corner-size;
+  border-bottom-right-radius: 8px;
+  padding: 10px 0 0 15px;
+}
