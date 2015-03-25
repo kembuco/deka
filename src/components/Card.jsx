@@ -1,17 +1,10 @@
 import React from "react";
 
 let Card = React.createClass({
-    getInitialState() {
-        return {
-            number: this.props.number,
-            color: this.props.color
-        }
-    },
-
     render() {
-        let number = this.state.number;
-        let color = this.state.color;
-        let className = `card ${color}` + (number === 6 ? " underline" : "");
+        let number = this.props.number;
+        let color = this.props.color;
+        let className = `card ${color} ${number === 6 ? "underline" : ""}`;
 
         return (
             <div className={className}>
